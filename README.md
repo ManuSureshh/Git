@@ -44,8 +44,15 @@ git commit -m "Commit message"
 ```
 git push origin main
 ```
-
-
+```
+git push -v origin main # To check what's being pushed. v is for verbose
+```
+```
+git push -u origin main
+```
+```
+git push -f origin main # To force push
+```
 <br>
 
 
