@@ -4,6 +4,9 @@
 ```
 git init
 ```
+- When we use `git init` command, A hidden `.git` directory is created in the root of your project.
+- This directory contains all the metadata and object files for the repository, including configuration settings, history, and staging area.
+  
 2. Show the working directory status
 ```
 git status
