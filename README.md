@@ -81,28 +81,87 @@ git stash drop
 
 ## Viewing history
 1. Show commit logs.
+```
+git log
+```
+
 2. Show changes between commits, commit and working tree, etc.
 - Show unstaged changes
+  ```
+  git diff
+  ```
+  
 - Show staged changes
-3. Show various types of objects.
-4. Manage set of tracked repositories.
-5. Download objects and refs from another repository.
-6. Remove a remote
+  ```
+  git diff --staged
+  ```
 
-## Tagging 
+3. Show various types of objects.
+```
+git show commit_hash
+```
+
+## Remote Repositories
+
+1. Manage set of tracked repositories.
+```
+git remote -v
+```
+
+2. Add new Git remote
+```
+git remote add origin https://github.com/user/repo.git
+```
+
+4. Download objects and refs from another repository.
+```
+git fetch origin
+```
+
+6. Remove a remote
+```
+git remote rm origin
+```
+
+## Tagging
+
 1. Create, list, delete, or verify a tag object.
 - List tags
+```
+git tag
+```
+
 - Create an annotated tag
+```
+git tag -a v1.0 -m "Version 1.0"
+```
+
 - Delete a tag
+```
+git tag -d v1.0
+```
 
 2. Push tags to remote repository.
+```
+git push origin --tags
+```
 
 ## Undoing Changes
 1. Reset current HEAD to the specified state.
 - Undo last commit, keep changes staged
+```
+git reset --soft HEAD~1
+```
+
 - Undo last commit, discard changes
+```
+git reset --hard HEAD~1
+```
 
 2. Revert a commit by creating a new commit.
+```
+git revert commit_hash
+```
 
 ## Configuration
 1. Get and set repository or global options.
@@ -118,9 +177,37 @@ git cherry-pick commit_hash
 ```
 
 2. Reapply commits on top of another base tip.
+```
+git rebase main
+```
+
 3. Use binary search to find the commit that introduced a bug.
+```
+git bisect start
+```
+```
+git bisect bad
+```
+```
+git bisect good commit_hash
+```
+
 4. Show what revision and author last modified each line of a file.
+```
+git blame filename
+```
+
 5. Remove untracked files from the working directory.
+- Force clean
+```
+git clean -f
+```
+
+- Remove directories
+```
+git clean -fd
+```
+
 6. Create custom git commands.
 ```
 git config --global alias.co checkout
