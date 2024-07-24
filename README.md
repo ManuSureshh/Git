@@ -37,7 +37,9 @@
    ```
    git branch
    ```
+   ```
    git branch new-branch
+   ```
    ```
    git branch -d old-branch
    ```
