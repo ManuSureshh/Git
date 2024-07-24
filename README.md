@@ -1,4 +1,4 @@
-# Git
+# Git Commands
 ## Basic commands
 1. Initialize the new Git repository
 ```
