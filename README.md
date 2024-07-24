@@ -43,5 +43,19 @@
    ```
    git branch -d old-branch
    ```
-   
+2. Switch branches or restore working tree files.
+   - Switch to the main branch
+     ```
+     git checkout main
+     ```
+   - Create and switch to a new branch
+     ```
+     git checkout -b new-branch
+     ```
+3. Merge a branch into the current branch.
+   ```
+   git merge new-branch
+   ```
+
+
    
